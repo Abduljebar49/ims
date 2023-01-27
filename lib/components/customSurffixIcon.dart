@@ -14,7 +14,7 @@ class CustomSurffixIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(
+      padding: const EdgeInsets.fromLTRB(
         0,
         20,
         20,

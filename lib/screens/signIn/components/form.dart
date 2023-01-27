@@ -7,6 +7,8 @@ import 'package:ims/utils/constants.dart';
 import 'package:ims/utils/keyBoard.dart';
 
 class SignForm extends StatefulWidget {
+  const SignForm({super.key});
+
   @override
   _SignFormState createState() => _SignFormState();
 }
@@ -21,6 +23,7 @@ class _SignFormState extends State<SignForm> {
   final phoneController = TextEditingController();
   final List<String?> errors = [];
 
+  @override
   void initState() {
     _loadUserphone();
     _passwordVisible = false;
@@ -45,7 +48,7 @@ class _SignFormState extends State<SignForm> {
                   child: Theme(
                     data: ThemeData(
                         unselectedWidgetColor:
-                            Color.fromARGB(255, 8, 42, 47) // Your color
+                            const Color.fromARGB(255, 8, 42, 47) // Your color
                         ),
                     child: Checkbox(
                         activeColor: kPrimaryColor,
@@ -90,7 +93,7 @@ class _SignFormState extends State<SignForm> {
                     KeyboardUtil.hideKeyboard(context);
                   }
                 },
-                child: ContinueButton()),
+                child: const ContinueButton()),
           ),
         ],
       ),
@@ -134,11 +137,11 @@ class _SignFormState extends State<SignForm> {
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: IconButton(
           icon: _passwordVisible
-              ? Icon(
+              ? const Icon(
                   Icons.visibility,
                   color: kPrimaryColor,
                 )
-              : Icon(Icons.visibility_off),
+              : const Icon(Icons.visibility_off),
           onPressed: () {
             setState(() {
               _passwordVisible = !_passwordVisible;

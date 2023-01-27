@@ -37,7 +37,7 @@ const String Kloading = "Loading...";
 const String KotpError = "Please enter the otp code";
 
 final otpInputDecoration = InputDecoration(
-  contentPadding: EdgeInsets.symmetric(vertical: 15),
+  contentPadding: const EdgeInsets.symmetric(vertical: 15),
   border: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   enabledBorder: outlineInputBorder(),
@@ -46,7 +46,7 @@ final otpInputDecoration = InputDecoration(
 OutlineInputBorder outlineInputBorder() {
   return OutlineInputBorder(
     borderRadius: BorderRadius.circular(15),
-    borderSide: BorderSide(color: kTextColor),
+    borderSide: const BorderSide(color: kTextColor),
   );
 }
 
@@ -54,7 +54,7 @@ void showSnackBar(String text) {
   Get.rawSnackbar(
     messageText: Text(
       text,
-      style: TextStyle(color: Colors.white),
+      style: const TextStyle(color: Colors.white),
     ),
     snackStyle: SnackStyle.FLOATING,
     backgroundColor: kPrimaryColor,
